@@ -1,0 +1,26 @@
+#A basic example for a SDL program in C
+
+All this example does is open a window and blit a bitmap to the screen, the code is taken directly from the SDL2 documentation
+
+to set it up, ensure you have SDL, GCC and MinGW installed.
+Make sure you also have the right DLLs and header/library files for Windows
+get them at https://libsdl.org/ (get the SDL2 mingw-devel files).
+the header files (.h) are placed locally under SDL/include/
+the .dll files, .a and .la files are placed under SDL/lib/
+Lastly, the SDL2.dll to be shipped with the windows exe needs to be placed in the same folder as the executable.
+
+Keep in mind, this is just a *very* simple example, without proper project structure and a very minimal Makefile.
+
+The directory Structure when you're done should look as follows (you can check with the `tree` command on unix systems):
+├── Makefile
+├── hello.bmp
+├── main.c
+├── SDL2.dll
+├── SDL
+│   ├── include
+│   │   ├── all_files_ending_in.h
+│   └── lib
+│       ├── all_files_ending_in.dll
+│       └── all_files_ending_in.la
+
+3 directories, 86 files
